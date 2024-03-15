@@ -1,4 +1,4 @@
-package ua.edu.lntu.cw_1
+package ua.edu.lntu.ipz_cw_1
 
 import android.os.Bundle
 import android.widget.Space
@@ -6,10 +6,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -20,6 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import ua.edu.lntu.cw_1.R
 import ua.edu.lntu.cw_1.ui.theme.IPZ_CW_1_Diak_VladyslavTheme
 
 class MainActivity : ComponentActivity() {
@@ -36,6 +39,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Column {
                         Image(
+                            modifier = Modifier.size(128.dp),
                             painter = painterResource(id = R.drawable.android_logo),
                             contentDescription = ""
                         )
@@ -43,7 +47,8 @@ class MainActivity : ComponentActivity() {
                         Text(text = "Occupation", style = MaterialTheme.typography.bodySmall)
                     }
 
-                    Column {
+                    Column (
+                        verticalArrangement = Arrangement.Center,){
                         Row {
                             Image(
                                 painter = painterResource(id = R.drawable.ic_phone),
