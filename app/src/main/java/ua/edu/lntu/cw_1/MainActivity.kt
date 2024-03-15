@@ -66,10 +66,28 @@ class MainActivity : ComponentActivity() {
                                 style = MaterialTheme.typography.bodySmall
                             )
                         }
-//                        Row {
-//                            Text(text = "Email: ", style = MaterialTheme.typography.bodySmall)
-//                            Text(text = "
-//                    }
+                                               Row {
+                           Image(
+                               painter = painterResource(id = R.drawable.ic_share),
+                                contentDescription = ""
+                            )
+                            Spacer(modifier = Modifier.width(16.dp))
+                           Text(
+                                text = "@developer",
+                                style = MaterialTheme.typography.bodySmall
+                            )
+                        }
+                        Row {
+                            Image(
+                               painter = painterResource(id = R.drawable.ic_message),
+                                contentDescription = ""
+                            )
+                            Spacer(modifier = Modifier.width(16.dp))
+                            Text(
+                                text = "developer@gmail.com",
+                                style = MaterialTheme.typography.bodySmall
+                           )
+                        }
                     }
                 }
             }
